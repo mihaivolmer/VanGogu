@@ -1,0 +1,30 @@
+Turtle:
+
+http://java-turtle.googlecode.com/svn/Turtle/src/Turtle.java
+
+http://www.dreamincode.net/forums/topic/151957-turtle-graphics/
+
+
+
+
+
+
+algorithmic botany cap 1:
+
+http://algorithmicbotany.org/papers/abop/abop-ch1.pdf
+
+java lsystem:
+
+http://www.javaview.de/vgp/tutor/lsystem/LSystem.java
+
+
+lsystem and fractals:
+http://www.generation5.org/content/2004/lsystutorial.asp
+
+http://natureofcode.com/book/chapter-8-fractals/
+
+https://pawelb.wordpress.com/tag/l-systems/
+
+https://en.wikipedia.org/wiki/L-system
+
+https://en.wikipedia.org/wiki/Dragon_curve
