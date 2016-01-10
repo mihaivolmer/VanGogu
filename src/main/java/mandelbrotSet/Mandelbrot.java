@@ -25,7 +25,7 @@ public class Mandelbrot extends JFrame {
     private int color;
 
     private static final float[] randomColorVector = {0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f,
-            0.9f, 1.0f, 1.3f, 1.4f, 1.9f, 2.4f, 2.9f, 3.2f, 3.7f, 4.0f, 4.5f};
+            1.0f, 1.3f, 1.4f, 1.9f, 2.4f, 2.9f, 3.7f, 4.0f, 4.5f};
 
     public Mandelbrot(InputData inputData) {
         super("Mandelbrot Set");
@@ -54,8 +54,7 @@ public class Mandelbrot extends JFrame {
 
         this.width = (int) Math.floor(Math.abs((xMax - xMin) / resolution));
         this.height = (int) Math.floor(Math.abs((yMax - yMin) / resolution));
-        System.out.println("width: " + width);
-        System.out.println("height: " + height);
+
     }
 
     private void generateImage() {
@@ -97,11 +96,15 @@ public class Mandelbrot extends JFrame {
         Random random = new Random();
 
         int colorVectorSize = randomColorVector.length;
-        float position1 = randomColorVector[random.nextInt(colorVectorSize)];
-        float position2 = randomColorVector[random.nextInt(colorVectorSize)];
-        float position3 = randomColorVector[random.nextInt(colorVectorSize)];
+        float hue = randomColorVector[random.nextInt(colorVectorSize)];
+        float saturation = randomColorVector[random.nextInt(colorVectorSize)];
+        float brightness = randomColorVector[random.nextInt(colorVectorSize)];
 
-        return Color.HSBtoRGB(position1 + 10 * (float) smoothcolor, position2, position3);
+        System.out.println(hue);
+        System.out.println(saturation);
+        System.out.println(brightness);
+
+        return Color.HSBtoRGB(hue + 10 * (float) smoothcolor, saturation, brightness);
     }
 
     @Override
