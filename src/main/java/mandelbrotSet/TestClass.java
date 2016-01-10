@@ -6,7 +6,7 @@ package mandelbrotSet;
 public class TestClass {
 
     public static void main(String[] args) {
-        InputData inputData = new InputData("/home/laura/IdeaProjects/VanGogu/src/main/java/mandelbrotSet/mandelbrot4.in");
+        InputData inputData = new InputData("/home/laura/IdeaProjects/VanGogu/src/main/java/mandelbrotSet/mandelbrot3.in");
 
         System.out.println(inputData.toString());
 
