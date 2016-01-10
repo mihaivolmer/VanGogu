@@ -33,7 +33,7 @@ public class Mandelbrot extends JFrame {
         this.inputData = inputData;
         extractInputData();
 
-        setBounds(0, 0, width, height);
+        setBounds(50, 0, width, height);
 //        setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -117,5 +117,10 @@ public class Mandelbrot extends JFrame {
 
     }
 
-
+    public void reDraw() {
+        color = getColor();
+        generateImage();
+        revalidate();
+        repaint();
+    }
 }
