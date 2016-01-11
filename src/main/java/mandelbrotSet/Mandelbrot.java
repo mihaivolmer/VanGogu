@@ -23,12 +23,18 @@ public class Mandelbrot extends JFrame {
     private int width;
 
     private int color;
+    private Random random;
+    private int angle_rot;
 
     private static final float[] randomColorVector = {0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f,
             1.0f, 1.3f, 1.4f, 1.9f, 2.4f, 2.9f, 3.7f, 4.0f, 4.5f};
+    //private static final float[] randomColorVector = {0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f,
+    //       1.0f};
+    private static final int randomRotAngles = 36;
 
     public Mandelbrot(InputData inputData) {
         super("Mandelbrot Set");
+        random = new Random();
 
         this.inputData = inputData;
         extractInputData();
@@ -41,7 +47,7 @@ public class Mandelbrot extends JFrame {
 
         color = getColor();
         generateImage();
-
+        angle_rot = random.nextInt(randomRotAngles);
     }
 
     private void extractInputData() {
@@ -93,8 +99,6 @@ public class Mandelbrot extends JFrame {
 
         double smoothcolor = height + 1 - Math.log(Math.log(Math.abs(zMaxAbsValue))) / Math.log(2);
 
-        Random random = new Random();
-
         int colorVectorSize = randomColorVector.length;
         float hue = randomColorVector[random.nextInt(colorVectorSize)];
         float saturation = randomColorVector[random.nextInt(colorVectorSize)];
@@ -111,14 +115,21 @@ public class Mandelbrot extends JFrame {
     public void paint(Graphics g) {
         Graphics2D graphics2D = (Graphics2D) g;
 
-//        graphics2D.rotate(Math.toRadians(30));
+        graphics2D.translate(bufferedImage.getHeight() / 2, bufferedImage.getWidth() / 2);
+        graphics2D.rotate(Math.toRadians(angle_rot * 10));
+        graphics2D.scale(1.5, 1.5);
+        graphics2D.translate(-bufferedImage.getHeight() / 2, -bufferedImage.getWidth() / 2);
+        angle_rot++;
+        if(angle_rot >= randomRotAngles) {
+            angle_rot = 0;
+        }
 
         graphics2D.drawImage(bufferedImage, 0, 0, this);
 
     }
 
     public void reDraw() {
-        color = getColor();
+        //color = getColor();
         generateImage();
         revalidate();
         repaint();
