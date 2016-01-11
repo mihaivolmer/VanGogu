@@ -1,7 +1,7 @@
 # VanGogu
 Repository-ul pentru proiectul #2 (Van'Gogu) de la Management-ul Proiectelor Software
 
-Echipa:
+<b>Echipa:</b>
 
 Technical Writer
 
@@ -21,22 +21,24 @@ Testers
 
 Caruselul Literelor a fost conceput ca o aplicatie Android mobile
 
-Cerinta:
+<b>Cerinta:</b>
 
 http://elf.cs.pub.ro/mps/wiki/proiect/proiect-2
 
-Tehnologii folosite:
+<b>Tehnologii folosite:</b>
 
     Java
     Java Swing
 
-Scopul aplicatiei:
+<b>Scopul aplicatiei:</b>
 
 Aplicatia isi propune sa obtina o imagine cu o valoare “artistica” de un cat mai ridicat nivel de exprimare utilizand doar generare procedurala, geometrie fractalica, si algoritmica simpla intr-un interval de timp maxim de 60 de secunde. 
 
 
 
-Pasi configurare mediu de dezvoltare (IntelliJ IDEA): --clone de pe Git--
+<b>Pasi configurare mediu de dezvoltare (IntelliJ IDEA):</b>
+
+--clone de pe Git--
 
     Check out from Version Control -> GitHub -> Git Repository URL -> Clone -> Create project from existing sources -> Next -> Next-> Next -> Next -> Next -> Next -> Finish
 
