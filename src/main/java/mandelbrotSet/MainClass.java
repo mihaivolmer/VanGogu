@@ -3,7 +3,7 @@ package mandelbrotSet;
 /**
  * Created by laura on 10.01.2016.
  */
-public class TestClass {
+public class MainClass {
 
     public static void main(String[] args) {
         InputData inputData = new InputData("src/main/java/mandelbrotSet/mandelbrot3.in");
