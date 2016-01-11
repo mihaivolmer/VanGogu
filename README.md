@@ -41,8 +41,15 @@ Pasi configurare mediu de dezvoltare (IntelliJ IDEA): --clone de pe Git--
     Check out from Version Control -> GitHub -> Git Repository URL -> Clone -> Create project from existing sources -> Next -> Next-> Next -> Next -> Next -> Next -> Finish
 
 
-
-Modulele aplicatiei:
-
    
+<b>Modulele aplicatiei:</b>
 
+1. MainClass.java - Initilizeaza aplicatia Java
+                  - Instantiaza celelalte module si face legatura intre ele
+                  - Asigura efectul de animatie, apeland metoda reDraw timp de 60 de secunde
+2. Mandelbrot.java - clasa care se ocupa de interfata grafica
+                   - genereaza procedural forma graficului Mandelbrot
+                   - genereaza aleator culori
+                   - asigura rotirea imaginii la fiecare redesenare
+3. InputData.java - clasa care se ocupa de citirea datelor din fisierul de intrare
+                  - furnizeaza clasei Mandelbrot.java coeficientii pentru generarea multimii mandelbrot
